@@ -19,4 +19,8 @@ jobs:
     - name: Check out from Git
       uses: actions/checkout@v3
     - name: Check if Git tag exists
-      run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
+      run: echo '${{ toJSON(github) }}'
+    - name: Check files
+      run: ls -ltra    
+    - name: get readme context
+      run: cat README.md
