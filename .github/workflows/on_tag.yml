@@ -17,4 +17,6 @@ jobs:
     - name: Check out from Git
       uses: actions/checkout@v3
     - name: Check if Git tag exists
-      run: echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
+      run: ls -ltra
+    - name: tag job
+      run : echo This is what a tag based action look like
