@@ -2,12 +2,10 @@
 name: tag based workflow
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
-    inputs:
-      tag_version:
-        description: 'tag version (release version)'
-        required: true
-        default: 'v1.0.0'
+  push:
+    # Pattern matched against refs/tags
+    tags:        
+      - '*' 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
